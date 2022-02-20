@@ -1,13 +1,8 @@
 <template>
-  <input :type="type" class="text-field" :value="value" :placeholder="placeholder" />
+  <input class="text-field" :value="value" />
 </template>
 <script>
 export default {
   name: "Input",
-  prop: {
-    type: String,
-    placeholder: String,
-    value: String,
-  },
 };
 </script>
