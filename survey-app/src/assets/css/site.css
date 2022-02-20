@@ -55,6 +55,9 @@ select {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+label{
+  font-size: 0.825rem;
+}
 /** End global styles **/
 
 /** Init styles of text-field **/
