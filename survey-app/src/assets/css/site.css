@@ -1,0 +1,58 @@
+/** CSS Variables **/
+:root {
+    /** Blue color **/
+    --blue-800: 8, 19, 77;
+    --blue-700: 11, 60, 185;
+    /** Grey color **/
+    --grey-600: 137, 149, 161;
+    --grey-400: 173, 184, 204;
+    --grey-300: 227, 232, 242;
+    --grey-200: 238, 241, 244;
+    --grey-100: 250, 251, 252;
+    /** Yellow color **/
+    --yellow-800: 181, 136, 0;
+    --yellow-700: 255, 225, 118;
+    --yellow-500: 255, 248, 229;
+    /** Green color **/
+    --green-800: 0, 166, 113;
+    --green-700: 0, 210, 143;
+    --green-500: 223, 247, 239;
+    /** Red color **/
+    --red-800: 77, 8, 11;
+    --red-700: 174, 36, 67;
+    --red-600: 226, 34, 77;
+    --red-500: 252, 240, 240;
+    /** White color **/
+    --white: 255, 255, 255;
+    /** Black color **/
+    --black: 43, 54, 64;
+  
+    /** Gap **/
+    --gap-1: 8px;
+    --gap-2: 16px;
+    --gap-3: 24px;
+    --gap-4: 32px;
+    --gap-5: 48px;
+  
+    /** layout **/
+    --layout-height-1: 50px;
+  }
+  
+  /** Init global styles **/
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(var(--secondary-color));
+    font-family: 'Poppins', sans-serif;
+  }
+  input,
+  textarea,
+  select {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  /** End global styles **/
