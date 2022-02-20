@@ -82,7 +82,7 @@ select {
 .text-field:focus {
   color: #212529;
   background-color: #fff;
-  border: 2px solid rgb(var(--blue-700));
+  border: 2px solid rgb(var(--green-700));
   outline: 0;
 }
 .text-field__sm {
