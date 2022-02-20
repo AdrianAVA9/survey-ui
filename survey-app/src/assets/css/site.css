@@ -88,7 +88,28 @@ select {
 .text-field__sm {
   min-height: calc(1.5em + (0.5rem + 2px));
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   border-radius: 0.2rem;
 }
 /** End styles of text-field **/
+
+/** Init styles of form-group **/
+.form-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.form-group > :not(:first-child) {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-group > .text-field {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+/** End styles of form-group **/
