@@ -3,25 +3,32 @@
     <label class="answers__label">Escala</label>
     <div class="answers">
       <Answer
-        class=""
+        v-slot="scope"
         v-for="answer in answers"
         :key="answer.id"
         v-bind:answer="answer"
-      />
+        v-on:update-answer="updateAnswer"
+      >
+        <Input
+          class="text-field__sm"
+          :value="answer.value"
+          :placeholder="'Digite una respuesta'"
+          @input="scope.change"
+        />
+      </Answer>
     </div>
-    <Button class="btn--primary-outline btn-ex-sm fw-600" v-bind:text="'+ Agregar'" />
   </div>
 </template>
 <script>
 import Answer from "@/components/Answer";
+import Input from "@/components/Input";
 import UniqueId from "@/Utils/UniqueId.js";
-import Button from "@/components/Button";
 
 export default {
   name: "ScaleAnswer",
   components: {
     Answer,
-    Button,
+    Input
   },
   data() {
     return {
@@ -29,20 +36,45 @@ export default {
         {
           id: UniqueId.generate(),
           number: 1,
-          value: "",
+          value: "Excelente",
         },
         {
           id: UniqueId.generate(),
           number: 2,
-          value: "",
+          value: "Bueno",
         },
         {
           id: UniqueId.generate(),
           number: 3,
-          value: "",
+          value: "Razonable",
+        },
+        {
+          id: UniqueId.generate(),
+          number: 4,
+          value: "Pobre",
+        },
+        {
+          id: UniqueId.generate(),
+          number: 5,
+          value: "No puede ser evaluado",
         },
       ],
     };
+  },
+  methods: {
+    updateAnswer: function (answer) {
+      let existingAnswer = this.answers.find((a) => a.id === answer.id);
+      if (!existingAnswer) return;
+
+      existingAnswer.value = answer.value;
+      this.emitUpdate();
+    },
+    emitUpdate: function () {
+      this.$emit(
+        "update-answers",
+        this.answers.filter((a) => a.value.length > 0)
+      );
+    },
   },
 };
 </script>
