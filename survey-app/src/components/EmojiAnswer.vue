@@ -20,7 +20,7 @@
     </div>
     <Button
       class="btn--primary-outline btn-ex-sm fw-600"
-      v-bind:text="'+ Agregar'"
+      v-bind:text="'+ Agregar opción'"
       @click="addAnswer"
     />
   </div>
