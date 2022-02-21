@@ -2,6 +2,7 @@
   <div class="form">
     <div class="form-group">
       <Input
+        ref="questionTitle"
         :type="'text'"
         :placeholder="'Ingrese la pregunta'"
         class="text-field__sm"
@@ -97,7 +98,7 @@ export default {
         },
       ],
       question: {
-        description: "",
+        title: "",
         unique: false,
         required: false,
         optionalAnswer: false,
@@ -116,6 +117,7 @@ export default {
       this.selectedAnswer = type;
     },
     addQuestion: function () {
+      this.question.title = this.$refs.questionTitle.$el.value;
       /** Falta validar la información antes de mostrarlo en el preview **/
       this.$emit("add-question", this.question);
     },
