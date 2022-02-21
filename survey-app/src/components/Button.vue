@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" :disabled="disabled" @click="() => this.$emit('click')">
+  <button class="btn" :disabled="disabled">
     <span
       v-if="state === 'loading'"
       class="spinner-border spinner-border__sm"
