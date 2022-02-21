@@ -3,12 +3,12 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'CreateSurvey',
+    name: 'createSurvey',
     component: () => import(/* webpackChunkName: "create-survey" */ '../views/CreateSurvey.vue')
   },
   {
     path: '/create-survey',
-    name: 'CreateSurvey',
+    name: 'createSurvey',
     component: () => import(/* webpackChunkName: "create-survey" */ '../views/CreateSurvey.vue')
   }
 ]
