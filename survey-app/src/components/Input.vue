@@ -1,5 +1,5 @@
 <template>
-  <input class="text-field" :value="value" />
+  <input class="text-field" />
 </template>
 <script>
 export default {
