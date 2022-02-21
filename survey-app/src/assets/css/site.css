@@ -46,7 +46,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(var(--secondary-color));
+  background-color: rgb(var(--grey-200));
   font-family: "Poppins", sans-serif;
 }
 input,
@@ -64,8 +64,26 @@ label {
 .mr-1 {
   margin-right: 10px;
 }
-.fw-600{
+.mb-2 {
+  margin-bottom: var(--gap-2) !important;
+}
+.mt-2 {
+  margin-top: var(--gap-2) !important;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.fw-600 {
   font-weight: 600;
+}
+.spacer {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid rgb(var(--grey-200));
 }
 /** Init styles of utils class **/
 
@@ -148,14 +166,14 @@ label {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .btn--primary {
-  background: rgb(var(--bg-primary));
+  background: rgb(var(--green-700));
   color: #fff;
 }
 .btn--default {
   background: #f4f6fa;
 }
 .btn--primary:hover {
-  background: rgba(var(--bg-primary), 0.9);
+  background: rgba(var(--green-700), 0.9);
 }
 .btn--primary-outline {
   color: rgb(var(--green-700));
